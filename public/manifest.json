@@ -1,0 +1,13 @@
+{
+  "name": "God of War 3 Remastered PC Wiki",
+  "short_name": "God of War 3 Remastered PC",
+  "description": "Fan wiki for the unofficial God of War 3 Remastered PC port — install guides, 4K/240FPS performance settings, FSR, mods and cheats, and how it compares to RPCS3 emulation.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0d0808",
+  "theme_color": "#c0392b",
+  "icons": [
+    { "src": "/android-chrome-192x192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/android-chrome-512x512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

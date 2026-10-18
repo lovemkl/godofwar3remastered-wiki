@@ -1,0 +1,56 @@
+export const metadata = {
+  title: "God of War 3 Remastered PC Performance Settings",
+  description: "4K, 240 FPS and FSR mapped to real hardware — the performance settings guide for the God of War 3 Remastered PC port, from 4GB VRAM cards to modern flagships.",
+  category: "guide",
+  date: "2026-10-16",
+};
+
+The God of War 3 Remastered PC port earns its reputation in the settings menu. Where the PS4 original locked you to living-room output and console frame pacing, the port hands you a resolution slider that reaches 4K, a frame ceiling that reaches 240 FPS, and FSR upscaling that stretches modest GPUs further than they have any right to go. This page maps those settings to real hardware tiers — the tested configurations from the port's October 2026 debut — so you can dial in your best experience in one pass instead of trial-and-erroring an evening away. Read the principles, find your tier, apply the recipe.
+
+## The Three Settings That Matter
+
+Strip the menu down and three decisions control almost everything about how the God of War 3 Remastered PC port looks and runs:
+
+**Output resolution.** The port renders the remaster's assets at your chosen output, up to full 4K. The gap between 1080p and 4K on this material is larger than you might expect — the remaster's art was built to survive scrutiny, and high resolutions reward it. If your hardware can hold your target frame rate at native resolution, take it.
+
+**Frame rate ceiling.** With the cap raised, capable hardware pushes the port to 120, 144 and up to 240 FPS. Frame rate is not cosmetic in this game: Kratos' combat is choreography — dodge windows, grab timing, quick-time events — and the original's 30-60 FPS console cadence hid detail that high refresh surfaces. Set the ceiling to your display's refresh rate, no lower.
+
+**FSR upscaling.** AMD's FidelityFX Super Resolution renders the scene at a lower internal resolution and reconstructs it to your output, trading a little sharpness for a lot of frames. For GPUs near the demonstrated 4GB VRAM floor of the God of War 3 Remastered PC port, FSR is the difference between 30-something and genuinely fluid play. The quality presets matter — see the tier recipes below.
+
+Everything else in the menu is seasoning. Texture and shadow options exist and are worth a look on older cards, but the three decisions above are the meal; the options you can safely ignore are cataloged on the features page so this page stays focused.
+
+## Hardware Tiers, Tested
+
+The configurations below reflect the port's first weeks of real-world coverage — independent testing and creator benchmarks, not vendor claims. Find the tier that matches your machine and start there.
+
+**The 4GB VRAM floor.** Early coverage demonstrated the port running on a 4GB VRAM GPU, and that is the honest floor, not the comfortable middle. The recipe: 1080p output, FSR on at quality preset, frame ceiling 60. You are not getting the port's showpiece numbers at this tier — you are getting playable Kratos on hardware that emulators would reject outright, which is exactly what a native port is for.
+
+**The mid-range sweet spot.** Independent testing on an RX 6700 XT with a Ryzen 5 5600 and 32GB of RAM reported smooth play — and this is the tier most players actually own. The recipe: 1440p native (or 4K with FSR quality), frame ceiling matched to a 120-144Hz display, everything else default. Mid-range hardware carries this port the way it carries well-made native games: without drama.
+
+**Modern flagships.** RTX-class cards and current AMD flagships were shown pushing the port toward its advertised 240 FPS ceiling in launch-window coverage. The recipe: native 4K, ceiling at your display's maximum, FSR off — you bought the headroom, spend it. A high-refresh 4K display is the only boundary this tier respects.
+
+**SteamOS and handhelds.** Coverage demonstrated the port running under SteamOS, which quietly makes it a handheld-class option for devices with enough GPU. Expect the 4GB-tier recipe with a handheld's thermal limits in mind; the port's low floor is doing the heavy lifting.
+
+## The 240 FPS Question, Answered Honestly
+
+The port's headline number deserves a paragraph of honesty. Yes, the ceiling reaches 240 FPS; yes, launch-window coverage showed high-end cards running far past console cadence. But the number you experience is the product of your GPU, your output resolution, your FSR choice and your display — in that order. A 240Hz monitor without flagship hardware should run 1440p with a modest FSR preset and will deliver an experience no PS4 owner ever had. Chase the settings that hold your refresh rate stable rather than a screenshot number; the features page's 4K-and-240FPS breakdown covers the theory for those who want it.
+
+One quirk worth knowing: like many high-frame-rate ports, the game's difficulty was calibrated for its original cadence, and combat can feel subtly faster at very high frame rates because animations interpolate more smoothly. If a quick-time event window feels different from memory, it is the frame rate talking. This is normal, desirable, and one more reason the ceiling matters.
+
+## FSR Presets Without the Marketing
+
+FSR presets are named for their internal render scale, and the practical differences are simple. Quality keeps the most detail and costs the most performance — start here. Balanced is the middle child most mid-range cards settle on at 4K output. Performance is for the floor tier reaching upward, and the sharpness cost starts showing. A useful mental model: FSR buys frames with resolution, so pair the preset with the output you actually chose — FSR quality at 1080p output is a waste of the feature, FSR performance at 4K on a 4GB card is survival. Tune one step at a time and let an hour of play, not a benchmark minute, tell you where to stop.
+
+## When Performance Is Wrong
+
+If your results miss your tier's recipe by a wide margin, work the checklist in order: confirm the frame ceiling and vsync settings (ceilings below your display's refresh are the number one silent killer of frame rate); confirm FSR is actually enabled — its effect is easy to misread in the menu; check that your GPU is the one being used, not an integrated chip quietly rendering the game; and regenerate the config file as described on the install page if the menu's saved state looks corrupted. The port's own overhead is small; when it underperforms, the cause is almost always configuration, and the fix is almost always one of those four.
+
+## The Settings Are the Game Now
+
+Console players never got to have this conversation about God of War III — the machine decided, and you played what it decided. The God of War 3 Remastered PC port moves that decision to you: the resolution, the cadence, the trade between sharpness and smoothness, all chosen on your hardware, from a 4GB spare part to a 240Hz flagship. Five minutes with this page's recipe for your tier buys the best version of Mount Olympus your machine can render — and the combat choreography, read at a frame rate the original platforms never offered, will tell you it was worth the five minutes. Tune once, play loud, and revisit this page when the port updates — the recipes move with the releases.
+
+## Retuning After a Port Update
+
+One habit separates calm players from frustrated ones across the God of War 3 Remastered PC port's update cycles: retuning deliberately after every adopted release. Fan projects ship improvements at a community's pace, and each new version can shift the performance equation — a build that lifts frame rates may let you drop an FSR preset you were leaning on; a build that adds features may carry new options worth understanding before they silently default. The retune itself takes three minutes: back up your config (the README names its location, and the install page's regeneration advice covers the failure mode), adopt the new release, run the opening Poseidon sequence as your benchmark scene, and adjust one setting at a time against what you see.
+
+Benchmark with the opening deliberately. It is the most demanding sustained sequence the God of War 3 Remastered PC port contains — collapsing geometry, water, particle-heavy combat and camera movement all at once — which makes it the most honest minute of testing the game offers. A configuration that holds frame rate there holds it everywhere in the campaign. Players who retune the God of War 3 Remastered PC settings on that scene after each update spend three minutes; players who skip it spend an evening wondering why act three feels different from act one. The discipline is small, the payoff compounds, and every recipe on this page assumes you keep it.

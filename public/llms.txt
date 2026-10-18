@@ -1,0 +1,27 @@
+# God of War 3 Remastered PC Wiki
+
+> Fan wiki for the unofficial God of War 3 Remastered PC port — install guides, 4K/240FPS performance settings, FSR, mods and cheats, and how it compares to RPCS3 emulation.
+
+Site: https://godofwar3remastered.wiki
+
+## Guides
+
+- God of War 3 Remastered PC Guide — the complete orientation: https://godofwar3remastered.wiki/guide/god-of-war-3-remastered-pc-guide
+- How to Install — the step-by-step walkthrough: https://godofwar3remastered.wiki/guide/how-to-install
+- Performance Settings — 4K, 240 FPS and FSR mapped to hardware: https://godofwar3remastered.wiki/guide/performance-settings
+- Controls & First Run — gamepad, keyboard and your first evening: https://godofwar3remastered.wiki/guide/controls-and-first-run
+
+## Features
+
+- 4K, 240FPS & FSR — the headline features explained: https://godofwar3remastered.wiki/features/4k-240fps-fsr
+- Mods & Cheats — what the port adds beyond the base game: https://godofwar3remastered.wiki/features/mods-and-cheats
+
+## Comparisons
+
+- Port vs RPCS3 — native execution against PS3 emulation: https://godofwar3remastered.wiki/comparisons/vs-rpcs3
+
+## FAQ
+
+- God of War 3 Remastered PC FAQ — the straight answers: https://godofwar3remastered.wiki/faq/faq
+
+Independent fan wiki. Not affiliated with Sony Interactive Entertainment or Santa Monica Studio.
