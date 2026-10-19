@@ -6,6 +6,22 @@ import { routing, type Locale } from "@/i18n/routing";
 // 从统一配置导入内容类型
 export const CONTENT_TYPES = CONFIG_CONTENT_TYPES;
 
+// 侧栏展示用短标题：剥品牌名前缀（导航只放关键词，压主词密度至 1-3%）
+let NAV_BRAND = "";
+try {
+  NAV_BRAND = JSON.parse(fs.readFileSync(path.join(process.cwd(), "public/manifest.json"), "utf-8")).short_name || "";
+} catch {
+  // manifest 缺失时回退完整标题
+}
+function navLabel(fullTitle: string): string {
+  if (NAV_BRAND && fullTitle.toLowerCase().startsWith(NAV_BRAND.toLowerCase())) {
+    const stripped = fullTitle.slice(NAV_BRAND.length).replace(/^[\s:\-–—|]+/, "").trim();
+    if (stripped) return stripped;
+  }
+  return fullTitle;
+}
+
+
 /**
  * 将文件名转换为 URL-safe slug
  * 所有非字母数字连字符下划线的字符（冒号、问号、井号、空格等）替换为 -
@@ -324,7 +340,7 @@ export function getDynamicNavigation(language: Locale = "en"): NavGroup[] {
         // 读取失败用默认标题
       }
 
-      links.push({ label: title, href: `/${groupSlug}/${articleSlug}`, badge });
+      links.push({ label: navLabel(title), href: `/${groupSlug}/${articleSlug}`, badge });
     }
 
     // 优先使用 locale 特定标题，否则回退到英文默认

@@ -6,7 +6,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://godofwar3remastered.wiki";
 
   // Static paths that always exist
-  const staticPaths = ["/", "/guide", "/features", "/comparisons", "/faq", "/privacy-policy", "/terms-of-service", "/copyright", "/about"];
+  const staticPaths = [ "/catalog","/", "/guide", "/features", "/comparisons", "/faq", "/privacy-policy", "/terms-of-service", "/copyright", "/about"];
 
   // Dynamic paths: scan actual MDX content files
   const contentPaths = await getAllContentPaths("en");

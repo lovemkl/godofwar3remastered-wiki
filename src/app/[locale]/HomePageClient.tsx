@@ -15,6 +15,17 @@ type Home = typeof en.home;
 const icons: LucideIcon[] = [BookOpen, Shield, Compass, Boxes, Flame, Code2, Swords, MapIcon, Users, Trophy, Skull, Zap, CircleHelp, ScrollText];
 
 
+
+// 卡片展示用短标题：剥品牌名前缀（竞品列文章不带游戏名，压主词密度至 1-3%）
+const BRAND = en.site.shortName;
+function cardTitle(t: string): string {
+  if (BRAND && t.toLowerCase().startsWith(BRAND.toLowerCase())) {
+    const s = t.slice(BRAND.length).replace(/^[\s:\-–—|]+/, "").trim();
+    if (s) return s;
+  }
+  return t;
+}
+
 export default function HomePageClient({ home, locale, articles, recentArticles }: { home: Home; locale: string; articles: ContentItem[]; recentArticles: ContentItem[] }) {
   const YOUTUBE_VIDEO_ID = "Q0GN0JvEXBw";
 
@@ -23,7 +34,7 @@ export default function HomePageClient({ home, locale, articles, recentArticles 
       {/* Hero Section — full-bleed Spartan backdrop */}
       <section className="relative overflow-hidden rounded-lg border border-[hsl(8_68%_48%/0.45)] px-4 py-14 text-center shadow-[0_0_50px_hsl(8_60%_38%/0.16)] sm:py-20">
         <div className="absolute inset-0 -z-10">
-          <img src="/images/hero.webp" alt="" aria-hidden className="size-full object-cover" />
+          <img src="/images/hero.webp" alt="" aria-hidden width={1280} height={720} className="size-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/80 to-background" />
         </div>
         <div className="mx-auto mb-5 flex items-center justify-center gap-2">
@@ -53,7 +64,7 @@ export default function HomePageClient({ home, locale, articles, recentArticles 
                   <Badge className="bg-[hsl(var(--nav-theme))] text-primary-foreground">{article.contentType.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase())}</Badge>
                   <span className="text-xs text-muted-foreground">{article.metadata.date}</span>
                 </div>
-                <p className="font-semibold text-foreground">{article.metadata.title}</p>
+                <p className="font-semibold text-foreground">{cardTitle(article.metadata.title)}</p>
               </Link>
             ))}
           </div>
@@ -104,7 +115,7 @@ export default function HomePageClient({ home, locale, articles, recentArticles 
                       <span className="grid h-10 w-10 place-items-center rounded-xl bg-muted text-[hsl(var(--nav-theme))]"><Icon className="h-5 w-5" /></span>
                       {article.metadata.badge && <Badge variant="secondary">{article.metadata.badge}</Badge>}
                     </div>
-                    <h3 className="mt-4 text-lg font-bold text-foreground group-hover:text-[hsl(var(--nav-theme))]">{article.metadata.title}</h3>
+                    <h3 className="mt-4 text-lg font-bold text-foreground group-hover:text-[hsl(var(--nav-theme))]">{cardTitle(article.metadata.title)}</h3>
                     <p className="mt-2 text-sm leading-6 text-muted-foreground line-clamp-3">{article.metadata.description}</p>
                   </Link>
                 );
