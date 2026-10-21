@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>God of War III Remastered Games — Search & Picture Puzzle | God of War III Remastered Wiki</title>
+<meta name="description" content="Play and search God of War III Remastered: a free browser sliding-picture puzzle with timer and best score, plus instant search across every God of War III Remastered wiki guide, code and unit page.">
+<link rel="icon" href="/favicon.png">
+<style>
+:root{--bg:#0f1216;--card:#171c23;--line:#262d37;--ink:#e8edf2;--mut:#8b96a3;--acc:#fdba74;}
+*{box-sizing:border-box}body{margin:0;font:16px/1.6 -apple-system,system-ui,sans-serif;background:var(--bg);color:var(--ink)}
+.wrap{max-width:860px;margin:0 auto;padding:20px 16px 60px}
+a{color:var(--acc);text-decoration:none}a:hover{text-decoration:underline}
+.crumb{font-size:13px;color:var(--mut);margin-bottom:14px}.crumb a{color:var(--mut)}
+h1{font-size:28px;margin:0 0 6px}.sub{color:var(--mut);margin:0 0 20px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;margin:14px 0}
+.panel h2{margin:0 0 10px;font-size:18px}
+input[type=search]{width:100%;padding:12px 14px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font-size:15px;outline:none}
+input[type=search]:focus{border-color:var(--acc)}
+#s-results{margin-top:10px;max-height:300px;overflow:auto}
+#s-results a{display:block;padding:8px 10px;border-radius:8px;font-size:14px}
+#s-results a:hover{background:var(--bg);text-decoration:none}
+#s-results .u{color:var(--mut);font-size:12px;margin-left:8px}
+.glinks{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
+.glinks a{font-size:13px;border:1px solid var(--line);border-radius:99px;padding:4px 12px;color:var(--mut)}
+.pz-top{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px}
+button{background:var(--acc);color:#fff;border:0;border-radius:9px;padding:8px 16px;font-weight:700;font-size:14px;cursor:pointer}
+button.ghost{background:transparent;border:1px solid var(--line);color:var(--ink)}
+.stat{font-size:13px;color:var(--mut)}.stat b{color:var(--ink);font-variant-numeric:tabular-nums}
+#board{display:grid;gap:4px;width:min(92vw,420px);aspect-ratio:1;margin:0 auto;background:var(--line);padding:4px;border-radius:12px;touch-action:manipulation;user-select:none}
+.tile{background-image:url("/images/hero.png");background-size:cover;border-radius:7px;cursor:pointer;transition:transform .08s}
+.tile:active{transform:scale(.96)}
+#win{text-align:center;padding:14px;font-weight:700;display:none}
+#best{margin-left:auto}
+@media(max-width:520px){h1{font-size:22px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<p class="crumb"><a href="/">&#8592; God of War III Remastered Wiki</a> / Games</p>
+<h1>God of War III Remastered Games: Search &amp; Puzzle</h1>
+<p class="sub">Two quick tools while you are here — search every guide on this site, and race the clock on a God of War III Remastered picture puzzle.</p>
+
+<div class="panel">
+<h2>&#128269; Search God of War III Remastered Wiki</h2>
+<input id="q" type="search" placeholder="Search guides, codes, units, levels… e.g. Guide" autocomplete="off">
+<div id="s-results"></div>
+<div class="glinks"><a id="gsite" target="_blank" rel="noopener">Search Google instead &#8594;</a></div>
+</div>
+
+<div class="panel">
+<h2>&#129513; God of War III Remastered Picture Puzzle</h2>
+<div class="pz-top">
+<button id="shuffle" type="button">Shuffle</button>
+<button class="ghost" id="size3" type="button">3&#215;3</button>
+<button class="ghost" id="size4" type="button">4&#215;4</button>
+<span class="stat">Moves <b id="mv">0</b></span>
+<span class="stat">Time <b id="tm">0.0s</b></span>
+<span class="stat" id="best">Best &#8212;</span>
+</div>
+<div id="board"></div>
+<div id="win">&#127881; Solved in <span id="fin"></span>! <button class="ghost" id="again" type="button">Play again</button></div>
+<p class="stat" style="margin-top:10px;text-align:center">Slide the tiles (tap or click) to rebuild the picture. Best time is saved on this device.</p>
+</div>
+
+<p class="crumb">Fan-made interactive page &#183; <a href="/">back to God of War III Remastered guides</a></p>
+</div>
+<script>
+var INDEX=[{"t":"Catalog","u":"https://godofwar3remastered.wiki/catalog"},{"t":"Guide","u":"https://godofwar3remastered.wiki/guide"},{"t":"Features","u":"https://godofwar3remastered.wiki/features"},{"t":"Comparisons","u":"https://godofwar3remastered.wiki/comparisons"},{"t":"Faq","u":"https://godofwar3remastered.wiki/faq"},{"t":"Privacy Policy","u":"https://godofwar3remastered.wiki/privacy-policy"},{"t":"Terms Of Service","u":"https://godofwar3remastered.wiki/terms-of-service"},{"t":"Copyright","u":"https://godofwar3remastered.wiki/copyright"},{"t":"About","u":"https://godofwar3remastered.wiki/about"},{"t":"Vs rpcs3","u":"https://godofwar3remastered.wiki/comparisons/vs-rpcs3"},{"t":"Faq","u":"https://godofwar3remastered.wiki/faq/faq"},{"t":"4k 240fps Fsr","u":"https://godofwar3remastered.wiki/features/4k-240fps-fsr"},{"t":"Mods And Cheats","u":"https://godofwar3remastered.wiki/features/mods-and-cheats"},{"t":"Controls And First Run","u":"https://godofwar3remastered.wiki/guide/controls-and-first-run"},{"t":"God Of War 3 Remastered Pc Guide","u":"https://godofwar3remastered.wiki/guide/god-of-war-3-remastered-pc-guide"},{"t":"How To Install","u":"https://godofwar3remastered.wiki/guide/how-to-install"},{"t":"Performance Settings","u":"https://godofwar3remastered.wiki/guide/performance-settings"},{"t":"Catalog","u":"https://godofwar3remastered.wiki/es/catalog"},{"t":"Es","u":"https://godofwar3remastered.wiki/es"},{"t":"Guide","u":"https://godofwar3remastered.wiki/es/guide"},{"t":"Features","u":"https://godofwar3remastered.wiki/es/features"},{"t":"Comparisons","u":"https://godofwar3remastered.wiki/es/comparisons"},{"t":"Faq","u":"https://godofwar3remastered.wiki/es/faq"},{"t":"Privacy Policy","u":"https://godofwar3remastered.wiki/es/privacy-policy"},{"t":"Terms Of Service","u":"https://godofwar3remastered.wiki/es/terms-of-service"},{"t":"Copyright","u":"https://godofwar3remastered.wiki/es/copyright"},{"t":"About","u":"https://godofwar3remastered.wiki/es/about"},{"t":"Vs rpcs3","u":"https://godofwar3remastered.wiki/es/comparisons/vs-rpcs3"},{"t":"Faq","u":"https://godofwar3remastered.wiki/es/faq/faq"},{"t":"4k 240fps Fsr","u":"https://godofwar3remastered.wiki/es/features/4k-240fps-fsr"},{"t":"Mods And Cheats","u":"https://godofwar3remastered.wiki/es/features/mods-and-cheats"},{"t":"Controls And First Run","u":"https://godofwar3remastered.wiki/es/guide/controls-and-first-run"},{"t":"God Of War 3 Remastered Pc Guide","u":"https://godofwar3remastered.wiki/es/guide/god-of-war-3-remastered-pc-guide"},{"t":"How To Install","u":"https://godofwar3remastered.wiki/es/guide/how-to-install"},{"t":"Performance Settings","u":"https://godofwar3remastered.wiki/es/guide/performance-settings"},{"t":"Catalog","u":"https://godofwar3remastered.wiki/pt/catalog"},{"t":"Pt","u":"https://godofwar3remastered.wiki/pt"},{"t":"Guide","u":"https://godofwar3remastered.wiki/pt/guide"},{"t":"Features","u":"https://godofwar3remastered.wiki/pt/features"},{"t":"Comparisons","u":"https://godofwar3remastered.wiki/pt/comparisons"},{"t":"Faq","u":"https://godofwar3remastered.wiki/pt/faq"},{"t":"Privacy Policy","u":"https://godofwar3remastered.wiki/pt/privacy-policy"},{"t":"Terms Of Service","u":"https://godofwar3remastered.wiki/pt/terms-of-service"},{"t":"Copyright","u":"https://godofwar3remastered.wiki/pt/copyright"},{"t":"About","u":"https://godofwar3remastered.wiki/pt/about"},{"t":"Vs rpcs3","u":"https://godofwar3remastered.wiki/pt/comparisons/vs-rpcs3"},{"t":"Faq","u":"https://godofwar3remastered.wiki/pt/faq/faq"},{"t":"4k 240fps Fsr","u":"https://godofwar3remastered.wiki/pt/features/4k-240fps-fsr"},{"t":"Mods And Cheats","u":"https://godofwar3remastered.wiki/pt/features/mods-and-cheats"},{"t":"Controls And First Run","u":"https://godofwar3remastered.wiki/pt/guide/controls-and-first-run"},{"t":"God Of War 3 Remastered Pc Guide","u":"https://godofwar3remastered.wiki/pt/guide/god-of-war-3-remastered-pc-guide"},{"t":"How To Install","u":"https://godofwar3remastered.wiki/pt/guide/how-to-install"},{"t":"Performance Settings","u":"https://godofwar3remastered.wiki/pt/guide/performance-settings"},{"t":"Catalog","u":"https://godofwar3remastered.wiki/de/catalog"},{"t":"De","u":"https://godofwar3remastered.wiki/de"},{"t":"Guide","u":"https://godofwar3remastered.wiki/de/guide"},{"t":"Features","u":"https://godofwar3remastered.wiki/de/features"},{"t":"Comparisons","u":"https://godofwar3remastered.wiki/de/comparisons"},{"t":"Faq","u":"https://godofwar3remastered.wiki/de/faq"},{"t":"Privacy Policy","u":"https://godofwar3remastered.wiki/de/privacy-policy"},{"t":"Terms Of Service","u":"https://godofwar3remastered.wiki/de/terms-of-service"},{"t":"Copyright","u":"https://godofwar3remastered.wiki/de/copyright"},{"t":"About","u":"https://godofwar3remastered.wiki/de/about"},{"t":"Vs rpcs3","u":"https://godofwar3remastered.wiki/de/comparisons/vs-rpcs3"},{"t":"Faq","u":"https://godofwar3remastered.wiki/de/faq/faq"},{"t":"4k 240fps Fsr","u":"https://godofwar3remastered.wiki/de/features/4k-240fps-fsr"},{"t":"Mods And Cheats","u":"https://godofwar3remastered.wiki/de/features/mods-and-cheats"},{"t":"Controls And First Run","u":"https://godofwar3remastered.wiki/de/guide/controls-and-first-run"},{"t":"God Of War 3 Remastered Pc Guide","u":"https://godofwar3remastered.wiki/de/guide/god-of-war-3-remastered-pc-guide"},{"t":"How To Install","u":"https://godofwar3remastered.wiki/de/guide/how-to-install"},{"t":"Performance Settings","u":"https://godofwar3remastered.wiki/de/guide/performance-settings"}];
+var q=document.getElementById('q'),sr=document.getElementById('s-results'),gs=document.getElementById('gsite');
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+function render(list){sr.innerHTML=list.slice(0,30).map(function(x){return '<a href="'+x.u+'">'+esc(x.t)+'<span class="u">'+esc(x.u)+'</span></a>';}).join('')||'<p class="stat">No pages matched.</p>';}
+function upd(){var v=q.value.trim().toLowerCase();gs.href='https://www.google.com/search?q=site:godofwar3remastered.wiki+'+encodeURIComponent(q.value.trim());
+if(!v){render(INDEX.slice(0,8));return;}
+render(INDEX.filter(function(x){return (x.t+' '+x.u).toLowerCase().indexOf(v)>=0;}));}
+q.addEventListener('input',upd);
+q.addEventListener('keydown',function(e){if(e.key==='Enter'){var a=sr.querySelector('a');if(a)location.href=a.getAttribute('href');}});
+upd();
+
+function rnd(n){var a=new Uint32Array(1);(window.crypto||{getRandomValues:function(b){b[0]=Math.floor(performance.now())&0xffffffff;}}).getRandomValues(a);return a[0]%n;}
+var N=3,order=[],moves=0,t0=null,tick=null;
+var bd=document.getElementById('board'),mv=document.getElementById('mv'),tm=document.getElementById('tm'),win=document.getElementById('win'),bestEl=document.getElementById('best');
+var bestKey='godofwar3remastered.wiki-puzzle-best-3';
+function loadBest(){bestKey='godofwar3remastered.wiki-puzzle-best-'+N;var b=localStorage.getItem(bestKey);bestEl.textContent=b?('Best '+b+'s'):'Best \u2014';}
+var tiles=[];
+function build(){bd.style.gridTemplateColumns='repeat('+N+',1fr)';bd.innerHTML='';tiles=[];order=[];
+for(var i=0;i<N*N;i++)order.push(i);
+for(var i=0;i<N*N-1;i++){var d=document.createElement('div');d.className='tile';
+(function(k){d.addEventListener('click',function(){slide(k);});})(i);
+tiles.push(d);bd.appendChild(d);}
+win.style.display='none';moves=0;mv.textContent=0;t0=null;tm.textContent='0.0s';clearInterval(tick);loadBest();draw();}
+function draw(){for(var i=0;i<tiles.length;i++){var v=order[i];
+if(v===N*N-1){tiles[i].style.opacity=0;}else{tiles[i].style.opacity=1;}
+tiles[i].style.backgroundPosition=(v%N*(100/N))+'% '+(Math.floor(v/N)*(100/N))+'%';}}
+function ok(a,b){var ax=a%N,ay=Math.floor(a/N),bx=b%N,by=Math.floor(b/N);return Math.abs(ax-bx)+Math.abs(ay-by)===1;}
+function slide(i){var hole=order.indexOf(N*N-1),pos=order.indexOf(i);
+if(!ok(pos,hole))return;
+if(!t0){t0=Date.now();tick=setInterval(function(){tm.textContent=((Date.now()-t0)/1000).toFixed(1)+'s';},100);}
+order[pos]=N*N-1;order[hole]=i;moves++;mv.textContent=moves;draw();
+var done=true;for(var k=0;k<order.length;k++){if(order[k]!==k){done=false;break;}}
+if(done){clearInterval(tick);var s=((Date.now()-t0)/1000).toFixed(1);
+var b=parseFloat(localStorage.getItem(bestKey)||'999');
+if(+s<b){localStorage.setItem(bestKey,s);loadBest();}
+win.style.display='block';document.getElementById('fin').textContent=s+'s / '+moves+' moves';}}
+function shuffle(){build();
+for(var r=0;r<N*N*30;r++){var h=order.indexOf(N*N-1),cands=[];
+[[0,-1],[0,1],[-1,0],[1,0]].forEach(function(d){var x=h%N+d[0],y=Math.floor(h/N)+d[1];
+if(x>=0&&x<N&&y>=0&&y<N)cands.push(y*N+x);});
+if(!cands.length)break;
+var c=cands[rnd(cands.length)],pos=order.indexOf(c);
+order[pos]=N*N-1;order[h]=c;}
+var inv=0,flat=order.slice(0,N*N-1);
+for(var a=0;a<flat.length;a++)for(var b2=a+1;b2<flat.length;b2++)if(flat[a]>flat[b2])inv++;
+if(inv%2!==0){var h2=order.indexOf(N*N-1);
+var adj=[];[[0,-1],[0,1],[-1,0],[1,0]].forEach(function(d){var x=h2%N+d[0],y=Math.floor(h2/N)+d[1];
+if(x>=0&&x<N&&y>=0&&y<N&&y*N+x!==N*N-1)adj.push(y*N+x);});
+if(adj.length){var c2=adj[0],p2=order.indexOf(c2);order[p2]=N*N-1;order[h2]=c2;}}
+moves=0;mv.textContent=0;t0=null;tm.textContent='0.0s';clearInterval(tick);draw();}
+document.getElementById('shuffle').onclick=shuffle;
+document.getElementById('again').onclick=shuffle;
+document.getElementById('size3').onclick=function(){N=3;build();shuffle();};
+document.getElementById('size4').onclick=function(){N=4;build();shuffle();};
+build();shuffle();
+</script>
+</body>
+</html>
