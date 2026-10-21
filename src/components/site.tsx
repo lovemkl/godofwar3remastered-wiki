@@ -32,7 +32,7 @@ export async function SiteHeader({ locale }: { locale: string }) {
       </nav>
       <div className="flex items-center gap-2">
         <LanguageSwitcher locale={locale} />
-        <ThemeToggle label={t("toggleTheme")} />
+        {/* GAMES_NAV_ADDED */}<Link href="/games/index.html" className="rounded-lg px-3 py-2 text-sm font-medium text-muted-foreground transition hover:bg-muted hover:text-foreground">Games</Link><ThemeToggle label={t("toggleTheme")} />
         <Sheet>
           <SheetTrigger asChild className="md:hidden"><Button variant="outline" size="icon" aria-label={t("menu")}><Menu className="h-4 w-4" /></Button></SheetTrigger>
           <SheetContent className="border-border bg-background text-foreground">

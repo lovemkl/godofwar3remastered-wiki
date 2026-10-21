@@ -59,6 +59,14 @@ button.ghost{background:transparent;border:1px solid var(--line);color:var(--ink
 </div>
 <div id="board"></div>
 <div id="win">&#127881; Solved in <span id="fin"></span>! <button class="ghost" id="again" type="button">Play again</button></div>
+<div id="sharebox" style="display:none;text-align:center;margin-top:12px">
+<canvas id="card" width="600" height="360" style="max-width:100%;border-radius:12px"></canvas>
+<div style="display:flex;gap:8px;justify-content:center;margin-top:10px;flex-wrap:wrap">
+<button class="ghost" id="dl" type="button">&#128190; Save card</button>
+<button class="ghost" id="cp" type="button">&#128203; Copy result</button>
+<button class="ghost" id="shr" type="button">&#128279; Share</button>
+</div>
+</div>
 <p class="stat" style="margin-top:10px;text-align:center">Slide the tiles (tap or click) to rebuild the picture. Best time is saved on this device.</p>
 </div>
 
@@ -100,7 +108,28 @@ var done=true;for(var k=0;k<order.length;k++){if(order[k]!==k){done=false;break;
 if(done){clearInterval(tick);var s=((Date.now()-t0)/1000).toFixed(1);
 var b=parseFloat(localStorage.getItem(bestKey)||'999');
 if(+s<b){localStorage.setItem(bestKey,s);loadBest();}
-win.style.display='block';document.getElementById('fin').textContent=s+'s / '+moves+' moves';}}
+win.style.display='block';document.getElementById('fin').textContent=s+'s / '+moves+' moves';
+drawCard(s);}}
+function drawCard(sec){var sb=document.getElementById('sharebox');sb.style.display='block';
+var cv=document.getElementById('card'),cx=cv.getContext('2d');
+var img=new Image();img.onload=function(){drawIt();};img.onerror=function(){drawIt(true);};
+img.src='{{IMG}}';
+function drawIt(noimg){cx.fillStyle='#10141b';cx.fillRect(0,0,600,360);
+if(!noimg){cx.globalAlpha=0.28;cx.drawImage(img,0,0,600,360);cx.globalAlpha=1;
+cx.fillStyle='rgba(16,20,27,0.55)';cx.fillRect(0,0,600,360);}
+cx.fillStyle='#e8edf2';cx.font='bold 34px -apple-system,system-ui,sans-serif';cx.textAlign='center';
+cx.fillText('\uD83E\uDDF3 God of War III Remastered Puzzle',300,96);
+cx.fillStyle='{{ACC}}';cx.font='bold 64px -apple-system,system-ui,sans-serif';
+cx.fillText(sec+'s',300,196);
+cx.fillStyle='#8b96a3';cx.font='22px -apple-system,system-ui,sans-serif';
+cx.fillText(moves+' moves \u00B7 '+N+'\u00D7'+N+' \u00B7 God of War III Remastered Wiki',300,246);
+cx.font='17px -apple-system,system-ui,sans-serif';cx.fillText(location.origin+'/games/index.html',300,312);}
+var txt='\uD83E\uDDF3 Solved the God of War III Remastered picture puzzle in '+sec+'s ('+moves+' moves, '+N+'\u00D7'+N+') \u2014 beat my time: '+location.origin+'/games/index.html';
+document.getElementById('dl').onclick=function(){var a=document.createElement('a');a.href=cv.toDataURL('image/png');a.download='godofwar3remastered.wiki-puzzle-'+sec+'s.png';a.click();};
+document.getElementById('cp').onclick=function(){navigator.clipboard.writeText(txt).then(function(){document.getElementById('cp').textContent='\u2713 Copied';});};
+document.getElementById('shr').onclick=function(){
+if(navigator.share){navigator.share({text:txt}).catch(function(){});}
+else{navigator.clipboard.writeText(txt).then(function(){document.getElementById('shr').textContent='\u2713 Link copied';});}};}
 function shuffle(){build();
 for(var r=0;r<N*N*30;r++){var h=order.indexOf(N*N-1),cands=[];
 [[0,-1],[0,1],[-1,0],[1,0]].forEach(function(d){var x=h%N+d[0],y=Math.floor(h/N)+d[1];
