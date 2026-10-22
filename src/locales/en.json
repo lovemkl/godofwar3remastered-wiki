@@ -3,7 +3,7 @@
     "name": "God of War 3 Remastered PC Wiki",
     "shortName": "God of War 3 Remastered PC",
     "tagline": "Fan-Made Wiki",
-    "description": "Fan wiki for the unofficial God of War 3 Remastered PC port — install guides, 4K/240FPS performance settings, FSR, mods and cheats, and how it compares to RPCS3 emulation.",
+    "description": "Independent reference for SpartanPort, the unofficial God of War III Remastered PC project. Sources, version checks and untested performance claims clearly separated.",
     "legalNotice": "Independent fan wiki. Not affiliated with Sony Interactive Entertainment or Santa Monica Studio."
   },
   "nav": {
@@ -18,16 +18,21 @@
   "home": {
     "meta": {
       "title": "God of War 3 Remastered PC: The Unofficial Port Wiki",
-      "description": "The God of War 3 Remastered PC port guide — install the unofficial Windows release, tune 4K, 240FPS and FSR, use mods and cheats, and compare RPCS3."
+      "description": "Independent reference for SpartanPort, the unofficial God of War III Remastered PC project. Sources, version checks and untested performance claims clearly separated."
     },
     "hero": {
       "eyebrow": "Fan-Made Wiki",
       "title": "God of War 3 Remastered PC",
-      "description": "The God of War 3 Remastered PC port is here — an unofficial, fan-made native Windows release of Sony's PS4 remaster that runs Kratos' Greek finale at 4K resolution and up to 240 FPS with FSR upscaling, mod support and cheat options, playable from start to finish. This wiki tracks it all: the install walkthrough, the performance settings, the features worth knowing, and how the port compares to emulating the original on RPCS3.",
+      "description": "SpartanPort is an unofficial God of War III Remastered PC project. Start with the maintainer repository, versioned release and installation checks. This wiki has not independently tested the binaries, performance or full campaign.",
       "primaryCta": "Read the Complete Guide",
       "secondaryCta": "Watch the Setup Video",
       "tertiaryCta": "All Guides",
-      "stats": ["Native Windows Release", "4K / 240 FPS", "FSR Upscaling", "Mods & Cheats Included"]
+      "stats": [
+        "Unofficial Project",
+        "Maintainer Sources",
+        "Version Checks",
+        "Not Independently Tested"
+      ]
     },
     "updates": {
       "title": "Fresh From the Port",
@@ -36,38 +41,89 @@
     },
     "start": {
       "eyebrow": "Get It Running In Four Steps",
-      "title": "From Download to 240 FPS",
+      "title": "Start with the Release and Sources",
       "cards": [
-        { "number": "1", "title": "Understand the Port", "description": "The God of War 3 Remastered PC release is an unofficial fan port — the complete guide explains what it is, who made it and what it means for an official version." },
-        { "number": "2", "title": "Install It", "description": "Windows 10 or 11, a DirectX-era GPU and a short setup — the install walkthrough covers sources, steps and the pitfalls that break first runs." },
-        { "number": "3", "title": "Tune the Settings", "description": "4K output, 240 FPS ceilings, FSR upscaling and per-GPU sweet spots — the performance page maps settings to hardware tiers." },
-        { "number": "4", "title": "Play It Your Way", "description": "Mods, cheats and the full start-to-finish campaign — the features pages cover everything the port adds on top of the PS4 remaster." }
+        {
+          "number": "1",
+          "title": "Understand the Port",
+          "description": "The God of War 3 Remastered PC release is an unofficial fan port — the complete guide explains what it is, who made it and what it means for an official version."
+        },
+        {
+          "number": "2",
+          "title": "Install It",
+          "description": "Windows 10 or 11, a DirectX-era GPU and a short setup — the install walkthrough covers sources, steps and the pitfalls that break first runs."
+        },
+        {
+          "number": "3",
+          "title": "Tune the Settings",
+          "description": "Record your release, hardware, settings and test results using the performance worksheet."
+        },
+        {
+          "number": "4",
+          "title": "Play It Your Way",
+          "description": "Mods, cheats and the full start-to-finish campaign — the features pages cover everything the port adds on top of the PS4 remaster."
+        }
       ]
     },
     "popular": {
       "eyebrow": "Most-Read This Week",
       "title": "Trending Now",
-      "quickLinks": ["Install", "4K", "FSR", "RPCS3"],
+      "quickLinks": [
+        "Install",
+        "4K",
+        "FSR",
+        "RPCS3"
+      ],
       "cards": [
-        { "title": "God of War 3 Remastered PC Guide", "description": "The complete orientation — what the port is, how it happened, and everything worth knowing before you install." },
-        { "title": "How to Install", "description": "The step-by-step walkthrough — sources, prerequisites, first launch and the fixes for the usual first-run failures." },
-        { "title": "Performance Settings", "description": "4K, 240 FPS and FSR — the settings mapped to real hardware, from 4GB VRAM cards to modern flagships." },
-        { "title": "Port vs RPCS3", "description": "Native execution against PS3 emulation — which path to Kratos' finale is right for your machine." }
+        {
+          "title": "God of War 3 Remastered PC Guide",
+          "description": "The complete orientation — what the port is, how it happened, and everything worth knowing before you install."
+        },
+        {
+          "title": "How to Install",
+          "description": "The step-by-step walkthrough — sources, prerequisites, first launch and the fixes for the usual first-run failures."
+        },
+        {
+          "title": "Performance Settings",
+          "description": "A reproducible testing worksheet; no independently verified hardware presets."
+        },
+        {
+          "title": "Port vs RPCS3",
+          "description": "Native execution against PS3 emulation — which path to Kratos' finale is right for your machine."
+        }
       ]
     },
     "aboutGame": {
       "title": "What Is the God of War 3 Remastered PC Port?",
       "paragraphs": [
-        "God of War 3 Remastered PC is an unofficial, fan-made native Windows port of Sony's 2015 PS4 remaster of God of War III — Kratos tearing through Mount Olympus in 1080p on PlayStation 4, now running natively on Windows 10 and 11 at up to 4K resolution and 240 FPS. Built by an independent developer and released in October 2026, the port is fully playable from start to finish, with FSR upscaling for modest GPUs, mod support, and built-in cheat options for players who want to revisit the campaign their way.",
-        "This wiki is the independent companion: what the port is and isn't, how to install and configure it, what the features do in practice, and how the experience compares to emulating the original PS3 release on RPCS3. With Sony's official PC plans for its back catalogue unclear, the community path is the only path — these pages document it, honestly and from play."
+        "This wiki covers SpartanPort, formerly gow3_pc. The linked maintainer documentation is the source for current release requirements and features.",
+        "We have not independently run the port. Older feature and performance articles remain reference material; verify them against the exact release before relying on them."
       ],
       "stats": [
-        { "label": "Type", "value": "Fan Port" },
-        { "label": "Base Game", "value": "PS4 Remaster" },
-        { "label": "Platform", "value": "Windows 10/11" },
-        { "label": "Max Output", "value": "4K / 240 FPS" },
-        { "label": "Upscaling", "value": "FSR" },
-        { "label": "Status", "value": "Playable Now" }
+        {
+          "label": "Type",
+          "value": "Fan Port"
+        },
+        {
+          "label": "Base Game",
+          "value": "PS4 Remaster"
+        },
+        {
+          "label": "Platform",
+          "value": "Windows 10/11"
+        },
+        {
+          "label": "Performance",
+          "value": "Not tested here"
+        },
+        {
+          "label": "Upscaling",
+          "value": "Release-dependent"
+        },
+        {
+          "label": "Status",
+          "value": "Playable Now"
+        }
       ],
       "cta": "Explore All Guides"
     },
@@ -82,9 +138,18 @@
           "href": "/guide/god-of-war-3-remastered-pc-guide",
           "displayType": "step-by-step",
           "highlights": [
-            { "label": "1", "detail": "What the port is — and what it isn't" },
-            { "label": "2", "detail": "How a fan port runs natively on Windows" },
-            { "label": "3", "detail": "What it means for an official PC release" }
+            {
+              "label": "1",
+              "detail": "What the port is — and what it isn't"
+            },
+            {
+              "label": "2",
+              "detail": "How a fan port runs natively on Windows"
+            },
+            {
+              "label": "3",
+              "detail": "What it means for an official PC release"
+            }
           ]
         },
         {
@@ -94,9 +159,18 @@
           "href": "/guide/how-to-install",
           "displayType": "step-by-step",
           "highlights": [
-            { "label": "1", "detail": "Prerequisites and Windows versions" },
-            { "label": "2", "detail": "The install steps in order" },
-            { "label": "3", "detail": "First-run fixes for the usual failures" }
+            {
+              "label": "1",
+              "detail": "Prerequisites and Windows versions"
+            },
+            {
+              "label": "2",
+              "detail": "The install steps in order"
+            },
+            {
+              "label": "3",
+              "detail": "First-run fixes for the usual failures"
+            }
           ]
         },
         {
@@ -106,10 +180,22 @@
           "href": "/guide/performance-settings",
           "displayType": "tier-grid",
           "highlights": [
-            { "label": "S", "detail": "The settings that matter most for frame rate" },
-            { "label": "A", "detail": "FSR presets — quality versus raw output" },
-            { "label": "B", "detail": "4K output on mid-range GPUs" },
-            { "label": "C", "detail": "The options you can safely ignore" }
+            {
+              "label": "S",
+              "detail": "The settings that matter most for frame rate"
+            },
+            {
+              "label": "A",
+              "detail": "Check feature availability in your exact release"
+            },
+            {
+              "label": "B",
+              "detail": "Record hardware and settings before comparing results"
+            },
+            {
+              "label": "C",
+              "detail": "The options you can safely ignore"
+            }
           ]
         },
         {
@@ -119,7 +205,11 @@
           "href": "/guide/controls-and-first-run",
           "displayType": "code-cards",
           "highlights": [
-            { "label": "Controller", "detail": "Gamepad-first controls, keyboard layouts and remapping notes for the campaign", "badge": "Verified" }
+            {
+              "label": "Controller",
+              "detail": "Gamepad-first controls, keyboard layouts and remapping notes for the campaign",
+              "badge": "Verified"
+            }
           ]
         },
         {
@@ -129,9 +219,18 @@
           "href": "/features/4k-240fps-fsr",
           "displayType": "card-list",
           "highlights": [
-            { "label": "🖥", "detail": "4K output on a remaster built for 1080p" },
-            { "label": "⚡", "detail": "240 FPS ceilings on high-refresh displays" },
-            { "label": "🔍", "detail": "FSR upscaling for 4GB-class GPUs" }
+            {
+              "label": "🖥",
+              "detail": "4K output on a remaster built for 1080p"
+            },
+            {
+              "label": "⚡",
+              "detail": "240 FPS ceilings on high-refresh displays"
+            },
+            {
+              "label": "🔍",
+              "detail": "FSR availability differs from earlier reporting"
+            }
           ]
         },
         {
@@ -141,10 +240,22 @@
           "href": "/features/mods-and-cheats",
           "displayType": "tier-grid",
           "highlights": [
-            { "label": "S", "detail": "Built-in cheat options and what they unlock" },
-            { "label": "A", "detail": "Mod support and the early mod scene" },
-            { "label": "B", "detail": "Quality-of-life tweaks worth installing" },
-            { "label": "C", "detail": "What mods can't fix (yet)" }
+            {
+              "label": "S",
+              "detail": "Built-in cheat options and what they unlock"
+            },
+            {
+              "label": "A",
+              "detail": "Mod support and the early mod scene"
+            },
+            {
+              "label": "B",
+              "detail": "Quality-of-life tweaks worth installing"
+            },
+            {
+              "label": "C",
+              "detail": "What mods can't fix (yet)"
+            }
           ]
         },
         {
@@ -154,9 +265,18 @@
           "href": "/comparisons/vs-rpcs3",
           "displayType": "step-by-step",
           "highlights": [
-            { "label": "1", "detail": "Native execution versus PS3 emulation" },
-            { "label": "2", "detail": "Hardware demands compared honestly" },
-            { "label": "3", "detail": "Which path suits which player" }
+            {
+              "label": "1",
+              "detail": "Native execution versus PS3 emulation"
+            },
+            {
+              "label": "2",
+              "detail": "Hardware demands compared honestly"
+            },
+            {
+              "label": "3",
+              "detail": "Which path suits which player"
+            }
           ]
         },
         {
@@ -166,9 +286,18 @@
           "href": "/faq/faq",
           "displayType": "card-list",
           "highlights": [
-            { "label": "❓", "detail": "Is it official? Is it safe? Is it legal?" },
-            { "label": "🛡", "detail": "What Sony's stance means for players" },
-            { "label": "🔧", "detail": "The fixes for common technical issues" }
+            {
+              "label": "❓",
+              "detail": "Is it official? Is it safe? Is it legal?"
+            },
+            {
+              "label": "🛡",
+              "detail": "What Sony's stance means for players"
+            },
+            {
+              "label": "🔧",
+              "detail": "The fixes for common technical issues"
+            }
           ]
         }
       ]
@@ -177,10 +306,22 @@
       "title": "Frequently Asked Questions",
       "description": "Quick answers to the most common questions about the God of War 3 Remastered PC port.",
       "items": [
-        { "question": "Is there an official God of War 3 Remastered PC release?", "answer": "Not currently. Sony has not announced an official PC version of God of War III Remastered, and reporting through 2026 suggests the company has scaled back its plans for bringing single-player PlayStation titles to PC. The current God of War 3 Remastered PC port is an unofficial, fan-made release." },
-        { "question": "What is the God of War 3 Remastered PC port?", "answer": "An unofficial, fan-made native Windows port of the 2015 PS4 remaster. It runs the game directly on Windows 10 and 11 without an emulator, at up to 4K resolution and 240 FPS, with FSR upscaling, mod support and cheat options, playable from start to finish." },
-        { "question": "Do I need a powerful PC to run it?", "answer": "No — that's part of what makes the port notable. Community testing shows it runs on cards as modest as 4GB VRAM GPUs, and mid-range setups like an RX 6700 XT with a Ryzen 5 5600 run it smoothly. The performance settings page maps hardware tiers to settings." },
-        { "question": "How is this different from emulating on RPCS3?", "answer": "The port runs natively on Windows using the PS4 remaster's assets, while RPCS3 emulates the original 2010 PS3 release — a much heavier translation layer. The comparison page breaks down the performance, visual and stability trade-offs of each path." }
+        {
+          "question": "Is there an official God of War 3 Remastered PC release?",
+          "answer": "SpartanPort is an unofficial project documented at FelipePrado0/SpartanPort. See the installation page for the maintainer and release links; this wiki has not independently tested the build."
+        },
+        {
+          "question": "What is the God of War 3 Remastered PC port?",
+          "answer": "Check the requirements for the release you plan to use. We have no independently verified minimum-hardware or FPS benchmark to recommend."
+        },
+        {
+          "question": "Do I need a powerful PC to run it?",
+          "answer": "No — that's part of what makes the port notable. Community testing shows it runs on cards as modest as 4GB VRAM GPUs, and mid-range setups like an RX 6700 XT with a Ryzen 5 5600 run it smoothly. The performance settings page maps hardware tiers to settings."
+        },
+        {
+          "question": "How is this different from emulating on RPCS3?",
+          "answer": "The port runs natively on Windows using the PS4 remaster's assets, while RPCS3 emulates the original 2010 PS3 release — a much heavier translation layer. The comparison page breaks down the performance, visual and stability trade-offs of each path."
+        }
       ]
     },
     "finalCta": {
@@ -208,15 +349,15 @@
   },
   "footer": {
     "aboutTitle": "God of War 3 Remastered PC Wiki",
-    "about": "God of War 3 Remastered PC Wiki is an independent fan-built wiki covering the unofficial native Windows port of Sony's PS4 remaster — install guides, performance settings, features and comparisons, written from play and updated as the port evolves.",
-    "quickLinks": "Quick Links",
+    "about": "Independent reference for SpartanPort, the unofficial God of War III Remastered PC project. Sources, version checks and untested performance claims clearly separated.",
+    "quickLinks": "Project sources",
     "guides": "Guides",
     "legal": "Legal",
     "copyright": "2026 God of War 3 Remastered PC Wiki. Not affiliated with Sony Interactive Entertainment or Santa Monica Studio. God of War is a trademark of Sony Interactive Entertainment.",
     "description": "The God of War 3 Remastered PC wiki — install, settings, features and comparisons for the unofficial native port.",
-    "playGame": "Setup Video",
+    "playGame": "Maintainer repository",
     "officialDiscord": "Community",
-    "officialYoutube": "Press Coverage",
+    "officialYoutube": "Versioned releases",
     "epicStore": "YouTube",
     "beginnerGuide": "Complete Guide",
     "mapGuides": "How to Install",
@@ -231,7 +372,7 @@
   },
   "features": {
     "overviewTitle": "Features",
-    "overviewDescription": "The headline features of the PC port — 4K output, 240 FPS ceilings, FSR upscaling, mod support and cheat options."
+    "overviewDescription": "Published feature claims and their release-specific limits, separated from independent testing."
   },
   "comparisons": {
     "overviewTitle": "Comparisons",

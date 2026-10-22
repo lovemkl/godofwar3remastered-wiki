@@ -1,65 +1,56 @@
 export const metadata = {
-  title: "How to Install the God of War 3 Remastered PC Port",
-  description: "The step-by-step install walkthrough for the God of War 3 Remastered PC port — prerequisites, Windows versions, install order and the fixes for the usual first-run failures.",
+  title: "God of War 3 Remastered PC: SpartanPort Source and Install Checks",
+  description: "Find the SpartanPort maintainer, versioned release and original instructions. No blanket antivirus exclusions or administrator workaround; independent test limits are stated.",
   category: "guide",
   date: "2026-10-16",
+  lastModified: "2026-10-22",
 };
 
-Installing the God of War 3 Remastered PC port is shorter than configuring most launchers, but the difference between a smooth first evening and a frustrating one is preparation. This page walks the install from prerequisites to first launch, in the order that causes the fewest problems, and ends with the fixes for the failures new players report most. Read it once before you download anything; five minutes here saves an hour later. Every step reflects how the port behaved in October 2026 testing and community coverage — details shift as the project updates, and this page shifts with them.
+The project is [SpartanPort by FelipePrado0](https://github.com/FelipePrado0/SpartanPort), formerly `gow3_pc`. **This wiki has not downloaded or executed its binaries, audited them, or completed the campaign.** This is a source and preparation guide, not a certified safe-build recommendation or an independently tested installation walkthrough.
 
-## Step Zero: Know What You Are Installing
+## Identify the Release Before Downloading
 
-Before anything else, set expectations correctly, because the God of War 3 Remastered PC port is not distributed like a normal game. There is no Steam page, no GOG listing, no publisher support desk. It is an unofficial, fan-made native Windows port of Sony's PS4 remaster, circulated through community channels and documented by press coverage and creators. That carries three practical consequences for installation day: you are responsible for where you download from, you should keep antivirus and common sense engaged, and you should not expect an auto-updater — new port versions arrive as new releases you choose to adopt. Our FAQ page covers the legality and safety questions in more depth; this page stays practical.
+| Field | Source review on October 22, 2026 |
+|---|---|
+| Maintainer repository | [FelipePrado0/SpartanPort](https://github.com/FelipePrado0/SpartanPort) |
+| Versioned release inspected | [2.7.0 / windows-v2.7.0](https://github.com/FelipePrado0/SpartanPort/releases/tag/windows-v2.7.0) |
+| Release commit shown | `003e42b` |
+| Binary downloaded and tested here | No |
+| Binary signature or checksum independently validated here | No |
 
-## Prerequisites
+Use the release attached to that repository. Record the exact asset filename, tag and published digest if available. A checksum match identifies file consistency with its source; it does not itself establish that software is harmless. A verified Git commit signature is also not an executable-signing certificate.
 
-The technical bar is low, which is one of the port's genuine strengths. Community testing through October 2026 established the working envelope:
+## What the Maintainer Requires
 
-- **Operating system:** Windows 10 or Windows 11. Coverage consistently describes the port as built for modern Windows; older systems are untested territory and not worth the risk.
-- **GPU:** discrete graphics with at least 4GB VRAM demonstrably runs it — that was the floor shown in early testing. An RX 6700 XT with a Ryzen 5 5600 and 32GB of RAM was reported running the game smoothly, and RTX-class cards push far beyond.
-- **Storage:** budget generously. A 4K-capable remaster's assets are not small, and you want headroom for saves, config edits and mod files.
-- **Peripherals:** a controller is strongly recommended. The game was designed for gamepads; the controls page covers keyboard play for the determined.
+The [project README](https://github.com/FelipePrado0/SpartanPort#download-and-play) lists Windows 10/11, an AVX-capable 64-bit CPU, Vulkan 1.3 graphics and the user's own supported PS4 game dump. The project does not include game files. It also documents an experimental Linux build. Read the instructions belonging to your chosen release rather than assuming every main-branch feature is included.
 
-That is the whole list. No SDKs, no runtime hunting beyond what Windows Update already gives you, no emulator BIOS files — the defining advantage of a native port over the RPCS3 path, which our comparison page details.
+The maintainer provides a launcher. An older version of this article incorrectly treated any launcher as a fake; a launcher alone is not evidence either way. Verify the repository, release and file identity.
 
-## The Install, In Order
+## A Careful Installation Sequence
 
-With prerequisites settled, the install itself is a short sequence. Doing it in this order avoids the majority of first-run problems:
+1. Read the versioned release notes and current prerequisites. Check your operating system, graphics driver, game build and asset choice against them.
+2. Keep an untouched backup of your own game files and saves. Record the release and settings you intend to test.
+3. Compare the downloaded file with any checksum or signature published by the maintainer. Stop if a value differs; do not substitute a random mirror.
+4. Keep security protection enabled. If software is blocked or quarantined, stop and investigate the exact detection with the maintainer and security provider. An unsigned program is not automatically safe or malicious.
+5. Follow the release's extraction and launcher instructions using ordinary user permissions. This guide does not recommend blanket antivirus exclusions, disabling protection or running as administrator to overcome an unexplained failure.
+6. After any successful launch, record the exact build, hardware, settings and observed behavior. A title screen is not proof that a full campaign is completable.
 
-1. **Verify your source.** Use the community channels documenting the port — press coverage from outlets like Wccftech and Tech4Gamers, and the creators who tested it — to find the current release location. Avoid random aggregator sites; the moment something is popular, lookalikes follow.
-2. **Download in one sitting** and let it finish completely. Partial archives cause the classic "extracts but won't run" failure.
-3. **Extract to a simple path** — `C:\Games\GoW3R` style, no deep nesting, no non-standard characters in the folder name. Some ports are sensitive to long paths and unusual characters, and there is no upside to testing it.
-4. **Read any README or notes shipped with the release.** Fan projects put their real documentation there: required settings, known issues, version notes. Five minutes, and it is the most current information that exists.
-5. **Whitelist the folder in your antivirus** if your security software flags the executable. Unofficial ports trip heuristics because they are unsigned — that is expected behavior, not evidence of malice, but it also means you must trust your source from step 1.
-6. **Launch from the folder directly**, not a shortcut made before the first successful run. Some ports generate config files on first launch, and shortcuts created before that can point at stale paths.
-7. **Open the settings before you play**, and set them deliberately. The performance page walks every setting; the short version is output resolution to your display, frame cap to your refresh rate, FSR on for GPUs near the 4GB floor.
+## Troubleshooting Without Guessing
 
-If the game reaches its title screen with sound and a stable frame counter, the God of War 3 Remastered PC port is installed correctly, and everything after this point is tuning.
+For a failure, preserve its error text and relevant logs before changing settings. Report the release tag, operating system, CPU, GPU, driver, game title ID and version, and a short reproduction sequence to the [maintainer's issue tracker](https://github.com/FelipePrado0/SpartanPort/issues). Remove personal paths or account details before sharing logs.
 
-## First-Run Fixes for Common Failures
+Change one setting at a time and keep a way to undo it. Avoid deleting saves, clearing unrelated folders or elevating privileges merely because another user's setup differed.
 
-The failures below account for nearly all first-run trouble reported in the port's opening weeks. Each fix is one step:
+## What the Performance Claims Mean
 
-- **The game will not launch at all.** Check the antivirus whitelist first — silent quarantine is the leading cause. Then verify the archive extracted completely, and re-extract if in doubt. Finally, run the executable as administrator once; some ports need permission to write their config on first launch.
-- **It launches to a black window then closes.** This is usually a resolution or display mismatch. Delete the generated config file (the README names its location), and let the port regenerate it at default settings on the next launch.
-- **Sound but no picture, or picture but no sound.** Check that your default audio device and refresh rate in Windows match what the port detected; regenerating the config as above fixes most of these.
-- **Stutter in the opening cinematic but not in gameplay.** Leave it be — first-run shader or asset caching commonly front-loads a little roughness that vanishes on the second launch. Judge performance only after the port has run once.
-- **Frame rate far below expectations.** Confirm the frame cap and vsync settings from step 7, then walk the performance page for your GPU class. The 240 FPS ceiling only appears when the cap allows it.
+The maintainer documents resolution and frame-rate options; a selectable 240 FPS setting is not a measured 240 FPS result on your PC. Our site has not independently reproduced 4K performance, hardware minimums or a complete playthrough. Early press claims should not be treated as current benchmark evidence.
 
-One caution that belongs in every guide of this kind: if a download demands a "launcher," an installer with bundled software, or payment, you are not looking at the community release. The God of War 3 Remastered PC port circulates as a straightforward archive, and anything wrapped around it deserves your skepticism.
+The README's feature-availability table marks FSR options disabled in the versions it describes. Check your release before following older FSR tuning advice. [Release 2.7.0 notes](https://github.com/FelipePrado0/SpartanPort/releases/tag/windows-v2.7.0) contain specific measurements and test limitations; they are maintainer/player reports, not tests by this wiki.
 
-## After the Install: A Sensible First Session
+## Sources
 
-Installed and running, take ten minutes to set your evening up properly before the first fight. Configure the controller layout from the controls page — the defaults are sensible, but a check beats a surprise mid-QTE. Note where saves live (the README again), and copy one after your first hour; fan ports update on their own schedule, and a save backup is the cheapest insurance in PC gaming. Then start a fresh campaign and let it run.
+- [Maintainer README](https://github.com/FelipePrado0/SpartanPort): project identity, requirements and documentation.
+- [Version 2.7.0 release](https://github.com/FelipePrado0/SpartanPort/releases/tag/windows-v2.7.0): version and changes reviewed October 22, 2026.
+- [PlayStation product page](https://www.playstation.com/en-us/games/god-of-war-iii-remastered/): the official Sony PS4 product, separate from this unofficial project.
 
-The remaster's opening — the Poseidon encounter staged across a collapsing Gaia — remains one of the most audacious cold opens in the medium's history, and the port's high frame rates make it read even better than memory suggests. That is the moment the whole install was for. Everything else this wiki carries — settings, features, comparisons, answers — exists to keep the hours after that moment as smooth as the first.
-
-## What a Clean Install Looks Like
-
-Because the finish line deserves a definition, here is what a correctly completed install of the God of War 3 Remastered PC port looks like, checkpoint by checkpoint. The folder sits at a simple path you chose, extracted completely, with the README read once through. Your antivirus has whitelisted the folder after you satisfied yourself about the source, so nothing is being silently quarantined. The executable launched on the first proper attempt — from the folder, as administrator if it needed the elevation — and wrote its config cleanly. The settings menu opened before any gameplay, and you set output resolution, frame ceiling and FSR deliberately using the performance recipes rather than accepting defaults blind. Sound works, the controller is detected, and the title screen holds a steady frame counter.
-
-When every checkpoint reads true, you have done the God of War 3 Remastered PC installation the way the community's accumulated experience says it should be done — and the game you launch into is the one this wiki's other pages describe, not a misconfigured cousin of it. Most troubleshooting queries in the port's opening weeks traced back to one skipped checkpoint; the list exists so the checklist, not the forum post, is where you catch it.
-
-## A Final Note on Patience
-
-The God of War 3 Remastered PC port is a living project, not a shrink-wrapped product; releases improve, quirks get patched, and the community's knowledge compounds weekly. When something misbehaves that this page did not predict, the README and the channels that documented the port are the live sources — and this page will catch up on the next update cycle, as it has caught up with every release before it. Install once, install carefully, and the hours that follow repay the care.
+October 22 correction: replaced unsupported claims of in-house testing, automatic security exclusions and administrator troubleshooting with explicit source and verification checks.
