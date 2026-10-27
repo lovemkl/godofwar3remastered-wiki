@@ -14,12 +14,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   const paths = [...staticPaths, ...dynamicPaths];
 
-  return routing.locales.flatMap((locale) =>
-    paths.map((path) => ({
+    // en-only sitemap: es/pt/de locales are nav-only skeletons (thin-content guard)
+  return paths.map((path) => ({
+      url: `${siteUrl}${path === "/" ? "" : path}`,
       url: `${siteUrl}${locale === "en" ? "" : `/${locale}`}${path === "/" ? "" : path}`,
       lastModified: new Date(),
       changeFrequency: path === "/" ? ("daily" as const) : ("weekly" as const),
       priority: path === "/" ? 1 : path === "/guide" ? 0.8 : 0.6,
-    })),
-  );
+  }));
 }
