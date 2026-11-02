@@ -1,40 +1,68 @@
 export const metadata = {
-  title: "Mods and Cheats in the PC Port",
-  description: "The mod support and built-in cheat options of the God of War 3 Remastered PC port — what they unlock, what the early mod scene looks like, and what mods can't fix yet.",
+  title: "God of War 3 Remastered Mods on PC — RPCS3 Patches & Cheats (November 2026)",
+  description: "Every working God of War III mod on PC right now: RPCS3 patch-manager fixes (motion blur, bloom, depth of field, MLAA), FPS unlock, community cheat patches (infinite health, magic, lifesteal, rage), plus install steps and version warnings.",
   category: "features",
-  date: "2026-10-16",
+  date: "2026-11-02",
 };
 
-Every significant PC release eventually answers the same question: can we change it? For the God of War 3 Remastered PC port, the answer arrived at launch — the port ships with modding tools and built-in cheat options as headline features, an unusual and deliberate choice by the developer. This page covers what that means in practice: what the cheats unlock for ordinary players, what the early mod scene looks like, which quality-of-life tweaks are worth installing first, and where the honest limits are. It is written from the port's October 2026 state and will age as the scene grows — dated and specific rather than padded and vague.
+Searching "god of war 3 remastered mods" lands you somewhere confusing: God of War III Remastered is a PS4 title, there is no official PC port — so every real "PC mod" is a **PS3-emulation patch running through RPCS3**, the PlayStation 3 emulator. This page is the honest map of that scene, re-verified November 2, 2026: which patches exist, what each actually does, how to install them through RPCS3's patch manager, and which warnings matter. No invented stats, no dead download links.
 
-## The Built-In Cheat Options
+## The One Version Warning (Read This First)
 
-Start with the cheats, because they are the feature most players will actually touch. The port ships with a suite of toggles that modify the campaign on the fly — the standard kit for a single-player sandbox: invulnerability, one-hit damage, resource and ability unlocks, and movement or traversal adjustments. Coverage of the port's feature set confirmed the suite at release, and its presence is philosophically interesting: the developer treated the game as the player's property to configure, not a curated difficulty contract.
+**RPCS3 runs the PS3 God of War III (BLUS/BCLS/BCES serials) — not PS4 Remastered files, and there is no official PC port to mod.** Practically speaking, PS3 GOW3 on RPCS3 is what "God of War 3 on PC" means in 2026, so that's what this guide covers. Before installing anything, open RPCS3's game list and note your game's **Serial** and **App Version** — patches are version-sensitive, and most community cheat patches are built for **App Version 01.00** on the PPU.
 
-Who are these for, legitimately? Three audiences, none of them hypothetical. Completionists revisiting a game they conquered years ago, who want the collectible sweep without the combat grind — the port's high frame rates already reward replay, and the cheats remove the friction. Players with accessibility needs, for whom one-hit damage or invulnerability converts an unplayable combat challenge into a playable story — cheats are the unglamorous backbone of game accessibility. And creators, who use traversal and damage toggles to stage shots and sequences the vanilla game never allows. What the cheats are not for is bragging rights; nobody has ever been impressed by a God of War III clear with invulnerability on, and the game's community has kept that honesty for sixteen years.
+## Patch-Manager Fixes (One-Click, Official-Grade)
 
-The practical guidance: back up your saves before the first toggle. The cheats write state into the campaign, and while the port's implementation is reported clean, saves are the one resource in PC gaming that cannot be re-downloaded. The install guide covers where saves live; the copy takes ten seconds.
+RPCS3 ships a built-in patch manager — right-click the game → **Change Customs / Patch Manager** — where configuration patches toggle without touching game files. For God of War III, four clarity fixes are the standard first installs, all confirmed against RPCS3's public patch repositories:
 
-## The Modding Tools
+| Patch | What it does | Difficulty |
+|---|---|---|
+| Disable Motion Blur | Kills the always-on motion blur — the single biggest clarity win on high-refresh monitors | Easy |
+| Disable Bloom | Removes the always-on bloom pass; many prefer it off at high internal resolution | Easy |
+| Disable Depth of Field | Removes the DoF softening; sharpens mid-distance rendering | Easy |
+| Disable MLAA + Disable SPU MLAA | Turns off the game's MLAA anti-aliasing and the SPU workers running it; pair with RPCS3's own resolution-scale + anti-aliasing override for a far sharper image | Easy |
 
-Beyond cheats, the port ships with actual modding capability — the more ambitious half of the feature, and the one with the longer future. The tools expose the game's data to modification: texture and model replacement, parameter editing, and the file-level access a scene needs to build anything durable. October 2026 is the scene's opening weeks, so this section describes infrastructure more than masterworks — the tools exist, they work, and the community is sorting through what they mean.
+All four are one-click toggles. If a toggle shows as incompatible, your game version doesn't match the patch definition — update RPCS3 to the latest build and re-check, or use the toggles that do apply.
 
-What early modding for a game like this reliably produces, based on how every such scene matures: **visual refreshes** first — texture packs, resolution-scaled interface elements, lighting adjustments — because they are content-addressable and low-risk. **Quality-of-life tweaks** next: camera behavior, HUD options, control refinements. **Gameplay remixes** later and slower — rebalanced combat, encounter edits — because they require the deepest understanding of the game's systems. The God of War 3 Remastered PC scene is at the beginning of that arc, and the pace will follow the tools' documentation and the community's appetite, in that order.
+## FPS Unlock: The Reason Most People Come Here
 
-For players watching this space rather than building in it: the same source discipline that governs the port itself governs its mods. The community channels documenting the port are where mod work circulates; random download sites are where lookalikes breed. An unofficial port's mods are doubly unofficial — trust networks are the only certification that exists.
+The headline mod everyone is actually chasing is the **FPS unlock** — taking the game past its console frame cap on emulation. Two honest notes before you chase it:
 
-## Quality-of-Life Tweaks Worth Installing
+1. **It is version-sensitive.** FPS unlock patches are tied to a specific game version and RPCS3 build; the patch manager shows what applies to your serial. If it's missing from your list, the practical path is updating RPCS3 first.
+2. **God of War III on PS3 is a 30 FPS title by design;** unlocking to 60 changes game speed on some engine systems. The community consensus is that GOW3's engine tolerates it well and it is the single most-used patch — but back up your save first (the install guide covers where saves live), then test.
 
-Given a young scene, what is worth a normal player's attention today? The honest shortlist from the port's opening weeks: **field-of-view or camera-distance adjustments**, the single most requested comfort tweak for third-person games of this era; **HUD scaling and toggle options**, which high-resolution outputs make suddenly relevant — interface elements authored for 1080p living-room viewing read enormous at a 4K desk; and **frame-pacing and cap refinements** from the community, complementing the port's own settings with per-display tunings. Install one at a time, verify a clean launch after each, and keep a mental rollback path — the oldest wisdom of PC modding applies triply to a fan port.
+## Community Cheat Patches (Manual Import, v01.00)
 
-The performance settings guide's tier recipes remain the foundation; QoL mods are the trim. Players who want the theory behind the numbers should start there and return here for the garnish.
+Beyond the one-click fixes, the community maintains cheat patches — imported manually through the patch manager's import function. The current known set (all authored for **App Version 01.00, PPU**; all require manual import; none verified in-game by this wiki — author's descriptions translated, use at your own discretion):
 
-## What Mods Cannot Fix (Yet)
+| Cheat patch | Effect |
+|---|---|
+| Infinite Health | Keeps Kratos' health filled |
+| Infinite Magic | No magic cost, including the Poseidon opening |
+| Lifesteal | Enemies losing health restore Kratos', capped at max HP |
+| Unlimited Rage of Sparta | Skips the rage meter drain |
+| Infinite Item Meter | Bow, Head of Helios, Hermes' Boots item meter never depletes |
+| Infinite Double Jump | Chain extra jumps mid-air — may clip past level boundaries |
+| 2x / 5x Damage (mutually exclusive) | Incoming damage multipliers — yes, Kratos takes them too |
 
-The honest limits list, so expectations calibrate correctly. Mods have not added new campaign content — no restored chapters, no new encounters; the campaign is the remaster's, complete and unextended. Mods have not re-authored the game's assets — the occasional era-dated texture survives because replacement at scale is months of volunteer labor, not a toggle. Mods have not touched the story or cinematics, and any claim otherwise is imagination. And mods cannot change what the port fundamentally is: an unofficial project whose continuity depends on decisions outside the community's control. Every capability this page describes is the October 2026 state, subject to the project's own evolution.
+Back up your save before importing any of these. The port's built-in cheat toggles — the accessibility-friendly option on PC — behave differently and don't require patch files; see the PC guide for that route.
 
-One more limit that deserves plain language: mods cannot make the port official. No toggle, tool or texture changes the legal reality that Sony owns this world and has not blessed this release. The FAQ covers what that means for players; this page's job is only to keep that truth attached to the enthusiasm.
+## Setting Up RPCS3 for God of War III (Quick Start)
 
-## Why a Fan Port Ships These Features
+Eight steps, the short version — the full walkthrough with settings is in the [PC guide](/guide/god-of-war-3-remastered-pc-guide) and the [install guide](/guide/how-to-install):
 
-Worth a closing thought: mainstream publishers treat mod support as risk and cheats as reputational hazard, so a release shipping both, deliberately, at version one, tells you who built it. The God of War 3 Remastered PC port's feature set — cheats, mods, FSR, uncapped frames — reads as a love letter to what PC gaming is supposed to be: the game is yours, configure it. Sixteen years ago this game shipped as a locked-box console spectacle; today it circulates as a configurable, moddable, high-frame-rate Windows artifact maintained by people who clearly played it, loved it, and wanted it preserved properly. The mod scene will grow into whatever the community makes of it; the port has already made its statement by shipping the tools. Watch this page — it updates as the scene does.
+1. Install RPCS3 from the official site (rpcs3.net/download) — match your OS build
+2. Install PS3 firmware (PS3UPDAT.PUP, currently 4.93) via File → Install Firmware — official Sony source only
+3. Add your legally-dumped PS3 God of War III copy — **PS4 Remastered files don't work**
+4. Note the game's Serial + App Version from the game list
+5. Let PPU modules compile (first boot is slow — this is normal)
+6. Right-click the game → Patch Manager for the fixes above
+7. Set resolution scale to 200-300% for 4K-class output on strong GPUs
+8. Back up the save folder before enabling cheat patches
+
+## What "Mods" Can't Fix Yet
+
+Honest limits of the current scene: no texture packs beyond resolution scaling exist yet, no model replacements, and the cheat patch set is fixed at the list above — the scene is patch-config driven rather than asset-mod driven. Anyone selling "GOW3 remastered texture mod packs" for PC is selling you a favicon and hope. Everything real is in the two tables on this page, and every claim here is sourced to RPCS3's public repositories and community records — nothing invented.
+
+---
+*Sources checked November 2, 2026: RPCS3 public patch repositories, the emulator's official God of War III compatibility records, and community-authored patch notes. Patch availability varies by game serial and RPCS3 build — the patch manager is the source of truth for your setup.*
