@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-03T14:15:56.932Z",
+ "generatedAt": "2026-11-03T15:30:23.570Z",
  "items": [
   {
    "contentType": "comparisons",
@@ -144,6 +144,11 @@
      "level": 2
     },
     {
+     "id": "cheat-engine-on-the-native-port-what-actually-applies",
+     "text": "Cheat Engine on the Native Port (What Actually Applies)",
+     "level": 2
+    },
+    {
      "id": "setting-up-rpcs3-for-god-of-war-iii-quick-start",
      "text": "Setting Up RPCS3 for God of War III (Quick Start)",
      "level": 2
@@ -207,7 +212,7 @@
   {
    "contentType": "guide",
    "slug": "god-of-war-3-remastered-pc-guide",
-   "title": "God of War 3 Remastered PC: The Complete Guide",
+   "title": "God of War 3 Remastered PC: The Complete Guide (Install Chain Inside)",
    "badge": "Start Here",
    "date": "2026-10-16",
    "category": "guide",
@@ -235,6 +240,11 @@
     {
      "id": "ports-emulation-and-your-other-options",
      "text": "Ports, Emulation, and Your Other Options",
+     "level": 2
+    },
+    {
+     "id": "installing-the-native-port-the-four-step-chain",
+     "text": "Installing the Native Port: The Four-Step Chain",
      "level": 2
     },
     {

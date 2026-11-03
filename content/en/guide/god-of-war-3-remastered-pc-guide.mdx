@@ -1,10 +1,14 @@
 export const metadata = {
-  title: "God of War 3 Remastered PC: The Complete Guide",
-  description: "The complete guide to the God of War 3 Remastered PC port — what it is, how a fan project runs Sony's PS4 remaster natively on Windows, and what it means for an official release.",
+  title: "God of War 3 Remastered PC: The Complete Guide (Install Chain Inside)",
+  description: "The complete guide to the God of War 3 Remastered PC port — the four-step install chain (PKG extract, Patch 1.2, CUSA0163 setup, mods), performance expectations, and the honest legal picture. Checked 2026-11-03.",
   category: "guide",
   date: "2026-10-16",
+  lastModified: "2026-11-03",
   badge: "Start Here",
 };
+
+      <h2>God of War 3 Remastered on PC — quick answer</h2>
+      <p><strong>There is no official PC version.</strong> What works today is a fan-made native Windows port of the PS4 Remastered edition: playable start to finish, up to 4K/240 FPS with FSR upscaling, mods and built-in cheats. It is free, it is not sold by anyone, and it legally requires files dumped from your own PS4 copy. The install chain in one line: <strong>extract your PS4 files with a PKG Extractor → apply Patch 1.2 → arrange the CUSA0163 directory → launch and load mods.</strong> The full four-step walkthrough is below; the mods and cheats it unlocks are itemized on the <a href="/features/mods-and-cheats">mods &amp; cheats page</a>, and first-run setup on the <a href="/guide/how-to-install">install guide</a>.</p>
 
 God of War 3 Remastered PC is, depending on who you ask, either the best news PlayStation fans have had all year or a curiosity to watch from a careful distance. It is the unofficial, fan-made native Windows port of Sony's 2015 PlayStation 4 remaster of God of War III — Kratos' rampage through Mount Olympus, rebuilt for 1080p on PS4, and now running directly on Windows 10 and 11 at up to 4K resolution and 240 FPS. This guide is the complete orientation: what the port actually is, where it came from, how it performs, what you can and cannot expect from it, and how it fits into the bigger story of PlayStation classics on PC. If you only read one page on this wiki, make it this one.
 
@@ -48,6 +52,20 @@ The performance settings page maps settings to hardware tiers in detail, and the
 The God of War 3 Remastered PC port is not the only way to play Kratos' finale on a computer, and an honest guide names the alternatives. The established route is RPCS3, the open-source PlayStation 3 emulator, running the original 2010 release. Emulation has matured impressively — but it demands real hardware, per-game configuration, and tolerance for the odd glitch. The comparison page on this wiki breaks down the two paths setting by setting: native execution against the translation layer, the remaster's 1080p assets against the original's, simplicity against flexibility. There is also the purist route of original hardware, increasingly a collector's option as PS3s age.
 
 Each path suits a different player. If you want the game running in ten minutes on the PC you already own, the port is the answer. If you want to be inside the ecosystem that preserves PlayStation history — with all its knobs and community knowledge — emulation is a deeper hobby. This wiki documents both without pretending the choice is ours to make for you.
+
+## Installing the Native Port: The Four-Step Chain
+
+The port's install flow has four distinct stages, and knowing the order before you start is the difference between a clean setup and an evening of confusion. The chain, in full:
+
+**1. Extract your game files (PKG Extractor).** The port runs on files dumped from a legitimate PS4 copy of the Remastered edition — the community is explicit that you need your own copy. A PKG Extractor pulls the game data out of the PS4 package file onto your PC, producing the raw game folder that everything else builds on.
+
+**2. Apply Patch 1.2.** The port's fixes ship as a patch applied to the extracted game folder. Patch 1.2 is the current milestone — skipping it is the most common cause of the crashes and graphical glitches that flood the troubleshooting threads.
+
+**3. Set up the CUSA0163 directory.** The port's loader expects the game content under the PS4 title-ID structure — the CUSA0163 directory — with the patched files in place. Getting this folder layout right is what the launcher validates on first run.
+
+**4. Launch and load mods.** The launcher configures graphics (FSR upscaling among the options), and the native build loads community mods directly — texture replacements, FPS unlock configurations and the cheat setups from the mods page all mount against this structure rather than through an emulator's patch manager.
+
+The honest caveats: this is a fan project with no official standing — Sony has said nothing, and the legality rests on dumping files from a copy you own. The install guides circulating on video are real but move fast; this wiki's install guide tracks the current verified steps with dates.
 
 ## Your First Evening, Planned
 
