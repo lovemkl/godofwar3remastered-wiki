@@ -1,0 +1,363 @@
+{
+ "generatedAt": "2026-11-03T14:15:56.932Z",
+ "items": [
+  {
+   "contentType": "comparisons",
+   "slug": "vs-rpcs3",
+   "title": "PC Port vs RPCS3 Emulation: Which Should You Play?",
+   "date": "2026-10-16",
+   "category": "comparisons",
+   "headings": [
+    {
+     "id": "the-fundamental-difference",
+     "text": "The Fundamental Difference",
+     "level": 2
+    },
+    {
+     "id": "performance-and-hardware",
+     "text": "Performance and Hardware",
+     "level": 2
+    },
+    {
+     "id": "fidelity-and-features",
+     "text": "Fidelity and Features",
+     "level": 2
+    },
+    {
+     "id": "stability-and-maintenance",
+     "text": "Stability and Maintenance",
+     "level": 2
+    },
+    {
+     "id": "which-path-for-which-player",
+     "text": "Which Path for Which Player",
+     "level": 2
+    },
+    {
+     "id": "the-bottom-line",
+     "text": "The Bottom Line",
+     "level": 2
+    }
+   ]
+  },
+  {
+   "contentType": "faq",
+   "slug": "faq",
+   "title": "God of War 3 Remastered PC FAQ",
+   "date": "2026-10-16",
+   "category": "faq",
+   "headings": [
+    {
+     "id": "is-there-an-official-god-of-war-3-remastered-pc-release",
+     "text": "Is There an Official God of War 3 Remastered PC Release?",
+     "level": 2
+    },
+    {
+     "id": "what-exactly-is-the-port",
+     "text": "What Exactly Is the Port?",
+     "level": 2
+    },
+    {
+     "id": "is-it-safe-to-download",
+     "text": "Is It Safe to Download?",
+     "level": 2
+    },
+    {
+     "id": "why-did-this-suddenly-get-so-big-in-october-2026",
+     "text": "Why Did This Suddenly Get So Big in October 2026?",
+     "level": 2
+    },
+    {
+     "id": "what-pc-do-i-need",
+     "text": "What PC Do I Need?",
+     "level": 2
+    },
+    {
+     "id": "how-is-this-different-from-emulating-on-rpcs3",
+     "text": "How Is This Different from Emulating on RPCS3?",
+     "level": 2
+    },
+    {
+     "id": "can-i-use-mods-and-cheats",
+     "text": "Can I Use Mods and Cheats?",
+     "level": 2
+    },
+    {
+     "id": "will-sony-shut-it-down",
+     "text": "Will Sony Shut It Down?",
+     "level": 2
+    },
+    {
+     "id": "where-do-i-go-from-here",
+     "text": "Where Do I Go From Here?",
+     "level": 2
+    }
+   ]
+  },
+  {
+   "contentType": "features",
+   "slug": "4k-240fps-fsr",
+   "title": "4k 240fps fsr",
+   "headings": [
+    {
+     "id": "resolution-and-frame-rate-are-different-measurements",
+     "text": "Resolution and Frame Rate Are Different Measurements",
+     "level": 2
+    },
+    {
+     "id": "check-fsr-against-the-release",
+     "text": "Check FSR Against the Release",
+     "level": 2
+    },
+    {
+     "id": "where-to-find-evidence",
+     "text": "Where to Find Evidence",
+     "level": 2
+    }
+   ]
+  },
+  {
+   "contentType": "features",
+   "slug": "mods-and-cheats",
+   "title": "God of War 3 Remastered Mods on PC — RPCS3 Patches & Cheats (November 2026)",
+   "date": "2026-11-02",
+   "category": "features",
+   "headings": [
+    {
+     "id": "the-one-version-warning-read-this-first",
+     "text": "The One Version Warning (Read This First)",
+     "level": 2
+    },
+    {
+     "id": "patch-manager-fixes-one-click-official-grade",
+     "text": "Patch-Manager Fixes (One-Click, Official-Grade)",
+     "level": 2
+    },
+    {
+     "id": "fps-unlock-the-reason-most-people-come-here",
+     "text": "FPS Unlock: The Reason Most People Come Here",
+     "level": 2
+    },
+    {
+     "id": "community-cheat-patches-manual-import-v0100",
+     "text": "Community Cheat Patches (Manual Import, v01.00)",
+     "level": 2
+    },
+    {
+     "id": "setting-up-rpcs3-for-god-of-war-iii-quick-start",
+     "text": "Setting Up RPCS3 for God of War III (Quick Start)",
+     "level": 2
+    },
+    {
+     "id": "what-mods-cant-fix-yet",
+     "text": "What \"Mods\" Can't Fix Yet",
+     "level": 2
+    }
+   ]
+  },
+  {
+   "contentType": "guide",
+   "slug": "controls-and-first-run",
+   "title": "God of War 3 Remastered PC Controls and First Run",
+   "date": "2026-10-16",
+   "category": "guide",
+   "headings": [
+    {
+     "id": "controller-first-always",
+     "text": "Controller First, Always",
+     "level": 2
+    },
+    {
+     "id": "keyboard-for-the-determined",
+     "text": "Keyboard, for the Determined",
+     "level": 2
+    },
+    {
+     "id": "remap-before-the-first-boss-not-after",
+     "text": "Remap Before the First Boss, Not After",
+     "level": 2
+    },
+    {
+     "id": "the-first-session-structured",
+     "text": "The First Session, Structured",
+     "level": 2
+    },
+    {
+     "id": "first-run-input-quirks-and-fixes",
+     "text": "First-Run Input Quirks and Fixes",
+     "level": 2
+    },
+    {
+     "id": "why-this-page-exists",
+     "text": "Why This Page Exists",
+     "level": 2
+    },
+    {
+     "id": "input-latency-and-what-high-frame-rates-do-to-feel",
+     "text": "Input Latency and What High Frame Rates Do to Feel",
+     "level": 2
+    },
+    {
+     "id": "the-controller-census",
+     "text": "The Controller Census",
+     "level": 2
+    }
+   ]
+  },
+  {
+   "contentType": "guide",
+   "slug": "god-of-war-3-remastered-pc-guide",
+   "title": "God of War 3 Remastered PC: The Complete Guide",
+   "badge": "Start Here",
+   "date": "2026-10-16",
+   "category": "guide",
+   "headings": [
+    {
+     "id": "what-the-port-actually-is",
+     "text": "What the Port Actually Is",
+     "level": 2
+    },
+    {
+     "id": "who-made-it-and-why-now",
+     "text": "Who Made It and Why Now",
+     "level": 2
+    },
+    {
+     "id": "what-official-channels-say-and-dont",
+     "text": "What Official Channels Say — and Don't",
+     "level": 2
+    },
+    {
+     "id": "how-it-performs",
+     "text": "How It Performs",
+     "level": 2
+    },
+    {
+     "id": "ports-emulation-and-your-other-options",
+     "text": "Ports, Emulation, and Your Other Options",
+     "level": 2
+    },
+    {
+     "id": "your-first-evening-planned",
+     "text": "Your First Evening, Planned",
+     "level": 2
+    },
+    {
+     "id": "the-wikis-promise",
+     "text": "The Wiki's Promise",
+     "level": 2
+    }
+   ]
+  },
+  {
+   "contentType": "guide",
+   "slug": "how-to-install",
+   "title": "God of War 3 Remastered PC: SpartanPort Source and Install Checks",
+   "date": "2026-10-16",
+   "category": "guide",
+   "headings": [
+    {
+     "id": "identify-the-release-before-downloading",
+     "text": "Identify the Release Before Downloading",
+     "level": 2
+    },
+    {
+     "id": "what-the-maintainer-requires",
+     "text": "What the Maintainer Requires",
+     "level": 2
+    },
+    {
+     "id": "a-careful-installation-sequence",
+     "text": "A Careful Installation Sequence",
+     "level": 2
+    },
+    {
+     "id": "troubleshooting-without-guessing",
+     "text": "Troubleshooting Without Guessing",
+     "level": 2
+    },
+    {
+     "id": "what-the-performance-claims-mean",
+     "text": "What the Performance Claims Mean",
+     "level": 2
+    },
+    {
+     "id": "sources",
+     "text": "Sources",
+     "level": 2
+    }
+   ]
+  },
+  {
+   "contentType": "guide",
+   "slug": "performance-settings",
+   "title": "performance settings",
+   "headings": [
+    {
+     "id": "start-with-the-exact-release",
+     "text": "Start with the Exact Release",
+     "level": 2
+    },
+    {
+     "id": "record-a-baseline",
+     "text": "Record a Baseline",
+     "level": 2
+    },
+    {
+     "id": "feature-availability",
+     "text": "Feature Availability",
+     "level": 2
+    },
+    {
+     "id": "report-a-problem",
+     "text": "Report a Problem",
+     "level": 2
+    }
+   ]
+  },
+  {
+   "contentType": "guide",
+   "slug": "play-gta-5-in-browser",
+   "title": "Play GTA 5 in Your Browser: Every Legit Way in 2026 (No Downloads)",
+   "date": "2026-10-23",
+   "category": "guide",
+   "headings": [
+    {
+     "id": "the-one-rule-that-keeps-you-safe",
+     "text": "The One Rule That Keeps You Safe",
+     "level": 2
+    },
+    {
+     "id": "route-1-cloud-gaming-services-the-real-answer",
+     "text": "Route 1: Cloud Gaming Services (The Real Answer)",
+     "level": 2
+    },
+    {
+     "id": "route-2-what-you-need-for-smooth-browser-play",
+     "text": "Route 2: What You Need for Smooth Browser Play",
+     "level": 2
+    },
+    {
+     "id": "route-3-gta-online-without-the-story-campaign",
+     "text": "Route 3: GTA Online Without the Story Campaign",
+     "level": 2
+    },
+    {
+     "id": "the-scams-ranked-by-how-often-they-appear",
+     "text": "The Scams, Ranked by How Often They Appear",
+     "level": 2
+    },
+    {
+     "id": "quick-answers",
+     "text": "Quick Answers",
+     "level": 2
+    },
+    {
+     "id": "related-reading",
+     "text": "Related Reading",
+     "level": 2
+    }
+   ]
+  }
+ ]
+}
