@@ -107,7 +107,7 @@ export default function HomePageClient({ home, locale, articles, recentArticles 
             <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-12 bg-gradient-to-l from-background to-transparent" />
             <div className="flex gap-4 animate-auto-scroll pb-4">
               {/* Render cards twice for seamless infinite loop */}
-              {[...articles, ...articles].map((article, index) => {
+              {articles.map((article, index) => {
                 const Icon = icons[index % icons.length];
                 return (
                   <Link key={`${index}-${article.contentType}/${article.slug}`} href={localizeHref(`/${article.contentType}/${article.slug}`, locale)} className="group min-w-[260px] max-w-[300px] flex-shrink-0 rounded-2xl border border-border bg-card/70 p-5 transition hover:border-[hsl(var(--nav-theme-light))]">
