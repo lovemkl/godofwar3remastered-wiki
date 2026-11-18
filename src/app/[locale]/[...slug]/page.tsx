@@ -16,7 +16,9 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://godofwar3remastered
 type Messages = typeof en;
 
 function languageAlternates(pathname: string) {
-  return Object.fromEntries(routing.locales.map((locale) => [locale, locale === "en" ? pathname : `/${locale}${pathname}`]));
+  const langs = Object.fromEntries(routing.locales.map((locale) => [locale, locale === "en" ? pathname : `/${locale}${pathname}`]));
+  langs["x-default"] = routing.defaultLocale === "en" ? pathname : `/${routing.defaultLocale}${pathname}`;
+  return langs;
 }
 
 export async function generateStaticParams() {
